@@ -36,10 +36,6 @@ namespace Reese.Demo
                         Value = new float3(0, 3, 0)
                     },
                     new NavNeedsSurface { }
-                    // new PhysicsVelocity { }
-                    // new PhysicsMass { },
-                    // new PhysicsDamping { },
-                    // new PhysicsGravityFactor { Value = 1 }
                 )
             );
         }
