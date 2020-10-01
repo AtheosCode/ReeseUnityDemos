@@ -19,7 +19,7 @@ namespace Reese.Demo
 
         protected override void OnCreate()
         {
-            if (!SceneManager.GetActiveScene().name.Equals("NavPointAndClickDemo"))
+            if (!SceneManager.GetActiveScene().name.Equals("NavPointAndClickDemo") && !SceneManager.GetActiveScene().name.Equals("NavPhysicalAgentDemo"))
                 Enabled = false;
 
             agentTransformGameObject = new GameObject("Agent Transform GameObject");
@@ -31,7 +31,11 @@ namespace Reese.Demo
                 Camera.main.transform.SetParent(agentTransformGameObject.transform);
 
             if (teleportationText == null)
-                teleportationText = GameObject.Find("Text").GetComponent<Text>();
+                try {
+                    teleportationText = GameObject.Find("Text").GetComponent<Text>();
+                } catch {
+                    // Do nothing.
+                }
 
             var keyboard = Keyboard.current;
 
