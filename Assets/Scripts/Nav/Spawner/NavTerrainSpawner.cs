@@ -86,14 +86,6 @@ namespace Reese.Demo
                     },
                     new Parent { },
                     new LocalToParent { },
-                    new LocalToWorld
-                    {
-                        Value = float4x4.TRS(
-                            SpawnOffset,
-                            quaternion.identity,
-                            1
-                        )
-                    },
                     new Translation
                     {
                         Value = SpawnOffset

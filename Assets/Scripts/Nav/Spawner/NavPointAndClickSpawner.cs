@@ -31,13 +31,9 @@ namespace Reese.Demo
                     },
                     new Parent { },
                     new LocalToParent { },
-                    new LocalToWorld
+                    new Translation
                     {
-                        Value = float4x4.TRS(
-                            new float3(0, 1, 0),
-                            quaternion.identity,
-                            1
-                        )
+                        Value = new float3(0, 1, 0)
                     },
                     new NavNeedsSurface { }
                 )

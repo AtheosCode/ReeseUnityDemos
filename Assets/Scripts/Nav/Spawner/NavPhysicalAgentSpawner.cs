@@ -31,7 +31,7 @@ namespace Reese.Demo
                     },
                     new Parent { },
                     new LocalToParent { },
-                    new Translation // Must use Translation instead of LocalToWorld. Hmm...
+                    new Translation
                     {
                         Value = new float3(0, 3, 0)
                     },
